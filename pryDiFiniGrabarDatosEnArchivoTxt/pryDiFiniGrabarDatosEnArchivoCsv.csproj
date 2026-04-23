@@ -46,14 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="clsArchivoClientes.cs" />
+    <Compile Include="frmCargarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmCargarClientes.Designer.cs">
+      <DependentUpon>frmCargarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestorClientesCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestorClientesCSV.Designer.cs">
+      <DependentUpon>frmGestorClientesCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoDeClientes.Designer.cs">
+      <DependentUpon>frmListadoDeClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCargarClientes.resx">
+      <DependentUpon>frmCargarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestorClientesCSV.resx">
+      <DependentUpon>frmGestorClientesCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoDeClientes.resx">
+      <DependentUpon>frmListadoDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

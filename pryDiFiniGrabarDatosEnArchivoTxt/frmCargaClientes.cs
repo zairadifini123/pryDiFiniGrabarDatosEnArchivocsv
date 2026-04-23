@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryDiFiniGrabarDatosEnArchivoTxt
 {
-    public partial class Form1 : Form
+    public partial class frmGestionClientes : Form
     {
-        public Form1()
+        public frmGestionClientes()
         {
             InitializeComponent();
         }
