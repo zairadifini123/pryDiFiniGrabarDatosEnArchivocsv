@@ -16,5 +16,13 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
         {
             InitializeComponent();
         }
+        clsArchivoClientes x = new clsArchivoClientes();
+        private void frmClientesDeudores_Load(object sender, EventArgs e)
+        {
+            x.ListarDeudores(dgvClientes);
+            lblTotalDeuda.Text = x.DeudaClientes().ToString();
+            lblPromedioDeudas.Text = x.PromedioDeuda().ToString();
+            lblCantidadClientes.Text = x.CantidadDeudores().ToString(); 
+        }
     }
 }

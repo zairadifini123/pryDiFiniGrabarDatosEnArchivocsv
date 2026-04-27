@@ -157,13 +157,13 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Límite de crédito";
+            this.Column3.HeaderText = "Deuda";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Deuda";
+            this.Column4.HeaderText = "Limite de credito";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 

@@ -40,5 +40,12 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             f.MdiParent = this;
             f.Show();
         }
+
+        private void listadoDeDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientesDeudores f = new frmClientesDeudores();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

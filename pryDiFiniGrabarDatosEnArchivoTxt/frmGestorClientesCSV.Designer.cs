@@ -107,6 +107,7 @@
             this.listadoDeDeToolStripMenuItem.Name = "listadoDeDeToolStripMenuItem";
             this.listadoDeDeToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.listadoDeDeToolStripMenuItem.Text = "Listado de deudores...";
+            this.listadoDeDeToolStripMenuItem.Click += new System.EventHandler(this.listadoDeDeToolStripMenuItem_Click);
             // 
             // listadoDeClientesOrdenadosPorToolStripMenuItem
             // 

@@ -134,5 +134,29 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             AD.Dispose();
         }
 
+        public Int32 CantidadDeudores()
+        {
+            string[] VecDatos = new string[4];
+            string DatosLeidos;
+            Int32 c = 0;
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                VecDatos = DatosLeidos.Split(';');
+                if (Convert.ToDecimal(VecDatos[2]) > 0)
+                {
+                    c++;
+                }
+                DatosLeidos = AD.ReadLine();
+                
+            }
+
+            AD.Close();
+            AD.Dispose();
+
+            return c;
+        }
     }
 }
