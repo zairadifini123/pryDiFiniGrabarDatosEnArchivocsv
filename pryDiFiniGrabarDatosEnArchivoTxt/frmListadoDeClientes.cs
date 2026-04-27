@@ -26,6 +26,11 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
         private void frmListadoDeClientes_Load(object sender, EventArgs e)
         {
             x.Listar(dgvClientes);
+            lblCantidadClientes.Text = x.CantidadClientes().ToString();
+            lblTotalDeuda.Text = x.DeudaClientes().ToString();
+            lblPromedioDeudas.Text = x.PromedioDeuda().ToString();
+
+
         }
     }
 }
