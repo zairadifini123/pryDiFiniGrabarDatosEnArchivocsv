@@ -43,7 +43,7 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             }
 
             AD.Close();
-            AD.Dispose();
+            AD.Dispose(); 
         }
 
         public Int32 CantidadClientes()
