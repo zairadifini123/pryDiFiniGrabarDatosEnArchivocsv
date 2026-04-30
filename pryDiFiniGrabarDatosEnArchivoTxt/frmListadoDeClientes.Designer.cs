@@ -42,12 +42,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReportes);
             this.groupBox2.Controls.Add(this.lblPromedioDeudas);
             this.groupBox2.Controls.Add(this.btnSalir);
             this.groupBox2.Controls.Add(this.lbl2);
@@ -167,6 +169,16 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // btnReportes
+            // 
+            this.btnReportes.Location = new System.Drawing.Point(92, 264);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(111, 23);
+            this.btnReportes.TabIndex = 18;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
             // frmListadoDeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnReportes;
     }
 }

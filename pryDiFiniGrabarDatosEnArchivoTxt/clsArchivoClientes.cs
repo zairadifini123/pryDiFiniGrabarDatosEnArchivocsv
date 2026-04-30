@@ -158,5 +158,55 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
             return c;
         }
+
+        public void GenerarReporte()
+        {
+            string DatosLeidos;
+            string[] VecDatos = new string[4];
+            Int32 Cantidad = 0;
+            Decimal Total = 0; 
+
+            StreamWriter Reporte = new StreamWriter("Reporte.csv", false, Encoding.UTF8);
+
+            Reporte.WriteLine("Listado de clientes");
+            Reporte.WriteLine("");
+            Reporte.WriteLine("Código;Nombre;Límite;Deuda");
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                VecDatos = DatosLeidos.Split(';');
+                Reporte.Write(VecDatos[0]);
+                Reporte.Write(";");
+                Reporte.Write(VecDatos[1]);
+                Reporte.Write(";");
+                Reporte.Write(VecDatos[3]);
+                Reporte.Write(";");
+                Reporte.WriteLine(VecDatos[2]);
+
+                DatosLeidos = AD.ReadLine();
+                Cantidad++;
+                Total = Total + Convert.ToDecimal(VecDatos[2]); 
+            }
+
+            AD.Close();
+            AD.Dispose();
+            Reporte.WriteLine(" ");
+            Reporte.Write("Total Deuda:;;");
+            Reporte.WriteLine(Total);
+
+            Reporte.Write("Total Clientes:;;");
+            Reporte.WriteLine(Cantidad);
+
+            Reporte.Write("Promedio de deuda:;;");
+            Reporte.WriteLine(Total/Cantidad);
+
+           
+
+            Reporte.Close();
+            Reporte.Dispose(); 
+        }
     }
 }

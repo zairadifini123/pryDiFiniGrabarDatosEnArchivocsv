@@ -32,5 +32,13 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
 
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            x.GenerarReporte();
+            MessageBox.Show("Reporte generado correctamente");
+
+
+        }
     }
 }
