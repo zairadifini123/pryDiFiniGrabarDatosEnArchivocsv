@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
 
 namespace pryDiFiniGrabarDatosEnArchivoTxt
@@ -11,7 +12,90 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
     internal class clsArchivoClientes
     {
         public string NombreArchivo = "Clientes.csv";
+        Decimal Total = 0;
+        Int32 C = 0;
 
+        private struct RegClientes
+        {
+            public Int32 Codigo;
+            public String Nombre;
+            public Decimal Deuda;
+            public Decimal Limite;
+        }
+
+        private RegClientes[] VecClientes = new RegClientes[1500];
+        private Int32 IND = 0;
+
+        private void CargarVector()
+        {
+            string DatosLeidos;
+            string[] VecDatos = new string[4];
+            IND = 0; 
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                VecDatos = DatosLeidos.Split(';');
+                VecClientes[IND].Codigo = Convert.ToInt32(VecDatos[0]);
+                VecClientes[IND].Nombre = VecDatos[1];
+                VecClientes[IND].Deuda = Convert.ToDecimal(VecDatos[2]);
+                VecClientes[IND].Limite = Convert.ToDecimal(VecDatos[3]);
+                IND++;
+                DatosLeidos = AD.ReadLine();
+            }
+
+            AD.Close();
+            AD.Dispose();
+        }
+
+        private void OrdenarVector()
+        {
+            RegClientes aux;
+
+            for(Int32 c = 0; c<IND -1; c++)
+            {
+                for (Int32 i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Codigo > VecClientes[i + 1].Codigo)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+            
+        }
+
+        private void ReescribirArchivo()
+        {
+            StreamWriter AD = new StreamWriter(NombreArchivo, false);
+
+            for(Int32 i=0; i<IND; i++)
+            {
+                AD.Write(VecClientes[i].Codigo);
+                AD.Write(";");
+                AD.Write(VecClientes[i].Nombre);
+                AD.Write(";");
+                AD.Write(VecClientes[i].Deuda);
+                AD.Write(";");
+                AD.WriteLine(VecClientes[i].Limite);
+            }
+
+            AD.Close();
+            AD.Dispose();
+
+        }
+
+
+        public void OrdenarArchivo()
+        {
+            CargarVector();
+            OrdenarVector();
+            ReescribirArchivo();
+        }
         public void Grabar(string Cod, string Clie, string Deu, string Lim)
         {
             StreamWriter AD = new StreamWriter(NombreArchivo, true);

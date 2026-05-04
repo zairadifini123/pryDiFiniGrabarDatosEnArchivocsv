@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoDeClientes));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.lblPromedioDeudas = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lbl2 = new System.Windows.Forms.Label();
@@ -42,13 +43,14 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnOrdenar);
             this.groupBox2.Controls.Add(this.btnReportes);
             this.groupBox2.Controls.Add(this.lblPromedioDeudas);
             this.groupBox2.Controls.Add(this.btnSalir);
@@ -64,6 +66,16 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consulta de datos";
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Location = new System.Drawing.Point(92, 264);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(75, 23);
+            this.btnReportes.TabIndex = 18;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // lblPromedioDeudas
             // 
@@ -169,15 +181,15 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // btnReportes
+            // btnOrdenar
             // 
-            this.btnReportes.Location = new System.Drawing.Point(92, 264);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(111, 23);
-            this.btnReportes.TabIndex = 18;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            this.btnOrdenar.Location = new System.Drawing.Point(173, 264);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnOrdenar.TabIndex = 19;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // frmListadoDeClientes
             // 
@@ -212,5 +224,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }

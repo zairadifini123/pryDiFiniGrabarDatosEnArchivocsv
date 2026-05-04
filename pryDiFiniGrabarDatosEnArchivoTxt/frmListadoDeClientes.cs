@@ -40,5 +40,14 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
 
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+            MessageBox.Show("Archivo ordenado");
+            x.Listar(dgvClientes);
+        }
+
+
     }
 }
