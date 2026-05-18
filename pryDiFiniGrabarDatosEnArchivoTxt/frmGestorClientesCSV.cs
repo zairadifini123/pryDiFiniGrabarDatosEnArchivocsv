@@ -49,5 +49,12 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             f.MdiParent = this;
             f.Show();
         }
+
+        private void listadoOrdenadoPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrdenarClientes f = new frmOrdenarClientes();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

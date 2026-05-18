@@ -38,6 +38,7 @@
             this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoOrdenadoPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,8 @@
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevoClienteToolStripMenuItem,
             this.listadoDeClientesToolStripMenuItem,
-            this.listadoDeDeToolStripMenuItem});
+            this.listadoDeDeToolStripMenuItem,
+            this.listadoOrdenadoPorToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -113,6 +115,13 @@
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.ventasToolStripMenuItem.Text = "Vendedores";
             // 
+            // listadoOrdenadoPorToolStripMenuItem
+            // 
+            this.listadoOrdenadoPorToolStripMenuItem.Name = "listadoOrdenadoPorToolStripMenuItem";
+            this.listadoOrdenadoPorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.listadoOrdenadoPorToolStripMenuItem.Text = "Listado ordenado por...";
+            this.listadoOrdenadoPorToolStripMenuItem.Click += new System.EventHandler(this.listadoOrdenadoPorToolStripMenuItem_Click);
+            // 
             // frmGestorClientesCSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +152,7 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoOrdenadoPorToolStripMenuItem;
     }
 }
 

@@ -292,5 +292,30 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             Reporte.Close();
             Reporte.Dispose(); 
         }
+
+        public void OrdenarPorCodigoAscendente(DataGridView Grilla)
+        {
+            string DatosLeidos;
+            string[] VecDatos = new string[4];
+
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatosLeidos = AD.ReadLine();
+
+            Grilla.Rows.Clear();
+            while (DatosLeidos != null)
+            {
+                VecDatos = DatosLeidos.Split(';');
+                if (Convert.ToInt32(VecDatos[2]) > 0)
+                {
+                    Grilla.Rows.Add(VecDatos[0], VecDatos[1], VecDatos[2], VecDatos[3]);
+                }
+                DatosLeidos = AD.ReadLine();
+            }
+
+            AD.Close();
+            AD.Dispose();
+        }
+
+
     }
 }
