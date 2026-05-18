@@ -19,7 +19,9 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAcercaDelDesarrollador f = new frmAcercaDelDesarrollador();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void agregarNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
