@@ -293,28 +293,182 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             Reporte.Dispose(); 
         }
 
-        public void OrdenarPorCodigoAscendente(DataGridView Grilla)
+        public void OrdenarPorCodigoAscendente()
         {
-            string DatosLeidos;
-            string[] VecDatos = new string[4];
+            CargarVector();
 
-            StreamReader AD = new StreamReader(NombreArchivo);
-            DatosLeidos = AD.ReadLine();
+            RegClientes aux;
 
-            Grilla.Rows.Clear();
-            while (DatosLeidos != null)
+            for (int c = 0; c < IND - 1; c++)
             {
-                VecDatos = DatosLeidos.Split(';');
-                if (Convert.ToInt32(VecDatos[2]) > 0)
+                for (int i = 0; i < IND - 1; i++)
                 {
-                    Grilla.Rows.Add(VecDatos[0], VecDatos[1], VecDatos[2], VecDatos[3]);
+                    if (VecClientes[i].Codigo > VecClientes[i + 1].Codigo)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
                 }
-                DatosLeidos = AD.ReadLine();
             }
 
-            AD.Close();
-            AD.Dispose();
+            ReescribirArchivo();
         }
+
+        public void OrdenarPorCodigoDescendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Codigo < VecClientes[i + 1].Codigo)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorNombreAscendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Nombre.CompareTo(VecClientes[i + 1].Nombre) > 0)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorNombreDescendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Nombre.CompareTo(VecClientes[i + 1].Nombre) < 0)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorLimiteAscendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Limite > VecClientes[i + 1].Limite)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorLimiteDescendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Limite < VecClientes[i + 1].Limite)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorDeudaAscendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Deuda > VecClientes[i + 1].Deuda)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
+        public void OrdenarPorDeudaDescendente()
+        {
+            CargarVector();
+
+            RegClientes aux;
+
+            for (int c = 0; c < IND - 1; c++)
+            {
+                for (int i = 0; i < IND - 1; i++)
+                {
+                    if (VecClientes[i].Deuda < VecClientes[i + 1].Deuda)
+                    {
+                        aux = VecClientes[i];
+                        VecClientes[i] = VecClientes[i + 1];
+                        VecClientes[i + 1] = aux;
+                    }
+                }
+            }
+
+            ReescribirArchivo();
+        }
+
 
 
     }

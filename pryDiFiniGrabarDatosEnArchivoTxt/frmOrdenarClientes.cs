@@ -12,6 +12,8 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 {
     public partial class frmOrdenarClientes : Form
     {
+        clsArchivoClientes x = new clsArchivoClientes();
+
         public frmOrdenarClientes()
         {
             InitializeComponent();
@@ -65,8 +67,9 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
                     }
                     break;
             }
+
             dgvListadoOrdenado.Rows.Clear();
-            
+            x.Listar(dgvListadoOrdenado);
         }
-    }
+    } 
 }
