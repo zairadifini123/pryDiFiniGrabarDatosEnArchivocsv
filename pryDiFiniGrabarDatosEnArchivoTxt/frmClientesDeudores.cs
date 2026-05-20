@@ -24,5 +24,10 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
             lblPromedioDeudas.Text = x.PromedioDeuda().ToString();
             lblCantidadClientes.Text = x.CantidadDeudores().ToString(); 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
     }
 }

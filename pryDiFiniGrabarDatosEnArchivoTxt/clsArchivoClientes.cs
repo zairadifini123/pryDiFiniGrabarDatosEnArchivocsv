@@ -295,24 +295,24 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
         public void OrdenarPorCodigoAscendente()
         {
-            CargarVector();
+            CargarVector(); //Para cargar los datos de los clientes
 
-            RegClientes aux;
+            RegClientes aux; //Crea una variable nueva para guardar temporalmente un cliente mientras se intercambian las posiciones del vector
 
-            for (int c = 0; c < IND - 1; c++)
+            for (int c = 0; c < IND - 1; c++) //Recorre el vector mientras haya clientes y asi asegurarse que queden ordenados   
             {
-                for (int i = 0; i < IND - 1; i++)
+                for (int i = 0; i < IND - c - 1; i++) //Para comparar cada elemento con el que le sigue
                 {
-                    if (VecClientes[i].Codigo > VecClientes[i + 1].Codigo)
+                    if (VecClientes[i].Codigo > VecClientes[i + 1].Codigo) //Compara codigos de dos clientes, si el actual es mayor que el siguiente, se intercambian 
                     {
-                        aux = VecClientes[i];
-                        VecClientes[i] = VecClientes[i + 1];
-                        VecClientes[i + 1] = aux;
+                        aux = VecClientes[i]; //Guarda el cliente actual en la variable temporal
+                        VecClientes[i] = VecClientes[i + 1]; //El cliente que sigue pasa a ocupar la posición actual
+                        VecClientes[i + 1] = aux; // Lo que habia en aux pasa a la siguiente posición 
                     }
                 }
             }
 
-            ReescribirArchivo();
+            ReescribirArchivo(); //Una vez ordenado el vector, se reescribe el archivo con los datos en el nuevo orden
         }
 
         public void OrdenarPorCodigoDescendente()
@@ -323,9 +323,9 @@ namespace pryDiFiniGrabarDatosEnArchivoTxt
 
             for (int c = 0; c < IND - 1; c++)
             {
-                for (int i = 0; i < IND - 1; i++)
+                for (int i = 0; i < IND - c - 1; i++)
                 {
-                    if (VecClientes[i].Codigo < VecClientes[i + 1].Codigo)
+                    if (VecClientes[i].Codigo < VecClientes[i + 1].Codigo) //Si el código actual es menor que el siguiente, significa que están al revés
                     {
                         aux = VecClientes[i];
                         VecClientes[i] = VecClientes[i + 1];

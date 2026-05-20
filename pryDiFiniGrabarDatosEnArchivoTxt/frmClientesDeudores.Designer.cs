@@ -56,37 +56,43 @@
             this.groupBox2.Controls.Add(this.lblTotalDeuda);
             this.groupBox2.Controls.Add(this.lblTitulo);
             this.groupBox2.Controls.Add(this.dgvClientes);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(16, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(543, 311);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(724, 383);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consulta de datos";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(11, 259);
+            this.btnSalir.Location = new System.Drawing.Point(15, 319);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(88, 23);
+            this.btnSalir.Size = new System.Drawing.Size(117, 28);
             this.btnSalir.TabIndex = 17;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblPromedioDeudas
             // 
             this.lblPromedioDeudas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPromedioDeudas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromedioDeudas.Location = new System.Drawing.Point(443, 262);
+            this.lblPromedioDeudas.Location = new System.Drawing.Point(591, 322);
+            this.lblPromedioDeudas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPromedioDeudas.Name = "lblPromedioDeudas";
-            this.lblPromedioDeudas.Size = new System.Drawing.Size(85, 20);
+            this.lblPromedioDeudas.Size = new System.Drawing.Size(113, 25);
             this.lblPromedioDeudas.TabIndex = 15;
             // 
             // lbl2
             // 
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(279, 262);
+            this.lbl2.Location = new System.Drawing.Point(372, 322);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(158, 25);
+            this.lbl2.Size = new System.Drawing.Size(211, 31);
             this.lbl2.TabIndex = 14;
             this.lbl2.Text = "Promedio de deudas:";
             // 
@@ -94,17 +100,19 @@
             // 
             this.lblCantidadClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCantidadClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadClientes.Location = new System.Drawing.Point(443, 227);
+            this.lblCantidadClientes.Location = new System.Drawing.Point(591, 279);
+            this.lblCantidadClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadClientes.Name = "lblCantidadClientes";
-            this.lblCantidadClientes.Size = new System.Drawing.Size(85, 20);
+            this.lblCantidadClientes.Size = new System.Drawing.Size(113, 25);
             this.lblCantidadClientes.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(291, 227);
+            this.label2.Location = new System.Drawing.Point(388, 279);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
+            this.label2.Size = new System.Drawing.Size(195, 31);
             this.label2.TabIndex = 12;
             this.label2.Text = "Cantidad de clientes:";
             // 
@@ -112,17 +120,19 @@
             // 
             this.lblTotalDeuda.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTotalDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDeuda.Location = new System.Drawing.Point(443, 191);
+            this.lblTotalDeuda.Location = new System.Drawing.Point(591, 235);
+            this.lblTotalDeuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalDeuda.Name = "lblTotalDeuda";
-            this.lblTotalDeuda.Size = new System.Drawing.Size(85, 20);
+            this.lblTotalDeuda.Size = new System.Drawing.Size(113, 25);
             this.lblTotalDeuda.TabIndex = 10;
             // 
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(324, 191);
+            this.lblTitulo.Location = new System.Drawing.Point(432, 235);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(113, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(151, 31);
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "Total de Deuda:";
             // 
@@ -136,43 +146,54 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvClientes.Location = new System.Drawing.Point(11, 28);
+            this.dgvClientes.Location = new System.Drawing.Point(15, 34);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(517, 150);
+            this.dgvClientes.RowHeadersWidth = 51;
+            this.dgvClientes.Size = new System.Drawing.Size(689, 185);
             this.dgvClientes.TabIndex = 0;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Código";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Usuario";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Deuda";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Limite de credito";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // frmClientesDeudores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 338);
+            this.ClientSize = new System.Drawing.Size(757, 416);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmClientesDeudores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes Deudores";
